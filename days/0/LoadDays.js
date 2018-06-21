@@ -50,6 +50,7 @@ define(function(require){
 
         function onLoad(event){
             if(day.request.status == 200){
+                console.log(this);
                 try{
                     days.push(JSON.parse(day.request.responseText));
                 }catch(err){
