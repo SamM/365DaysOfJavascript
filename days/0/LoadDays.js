@@ -33,6 +33,8 @@ define(function(require){
 
             var oReq = new XMLHttpRequest();
 
+            listeners.request = oReq;
+
             oReq.addEventListener("load", callbacks.load);
             oReq.addEventListener("error", callbacks.error);
 
@@ -47,7 +49,7 @@ define(function(require){
         var done = 0;
 
         function onLoad(event){
-            if(this.status == 200){
+            if(day.request.status == 200){
                 try{
                     days.push(JSON.parse(this.responseText));
                 }catch(err){
