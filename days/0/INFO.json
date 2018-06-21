@@ -1,0 +1,11 @@
+{
+    "day": 0,
+    "date": "21 June 2018",
+    "scripts" : {
+        "LoadDays": {
+            "filename": "LoadDays.js",
+            "examples": {},
+            "documentation": "LoadDays/documentation.md"
+        }
+    }
+}

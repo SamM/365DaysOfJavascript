@@ -1,7 +1,11 @@
-var MyClass = (function(){
-    var MyClass = {};
-    return MyClass;
-})();
+var module, define, require;
 
-var module;
-if(typeof module == "object") module.exports = MyClass;
+if(typeof define != "function"){
+    define = function(definition){
+        if(typeof module == "object") module.exports = definition(require);
+    }
+}
+
+define(function(require){
+    return {};
+});
