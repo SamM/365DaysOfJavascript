@@ -51,10 +51,10 @@ define(function(require){
         function onLoad(event){
             if(day.request.status == 200){
                 try{
-                    days.push(JSON.parse(this.responseText));
+                    days.push(JSON.parse(day.request.responseText));
                 }catch(err){
-                    days.push({ day:start+done, error: err, text: this.responseText });
-                    callbacks.error(start+done, err, this.responseText);
+                    days.push({ day:start+done, error: err, text: day.request.responseText });
+                    callbacks.error(start+done, err, day.request.responseText);
                 }
                 callbacks.load(start+done, days.slice(-1)[0]);
 
