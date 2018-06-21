@@ -46,24 +46,27 @@ define(function(require){
         var day;
         var done = 0;
 
-        function onLoad(){
-            try{
-                days.push(JSON.parse(this.responseText));
-            }catch(err){
-                days.push({ day:start+done, error: err, text: this.responseText });
-                callbacks.error(start+done, err, this.responseText);
-            }
-            
-            callbacks.load(start+done, days.slice(-1)[0]);
+        function onLoad(event){
+            if(this.status == 200){
+                try{
+                    days.push(JSON.parse(this.responseText));
+                }catch(err){
+                    days.push({ day:start+done, error: err, text: this.responseText });
+                    callbacks.error(start+done, err, this.responseText);
+                }
+                callbacks.load(start+done, days.slice(-1)[0]);
 
-            done++;
+                done++;
 
-            if(done == end - start){
-                callbacks.done(days);
+                if(done == end - start){
+                    callbacks.done(days);
+                }else{
+                    day = LoadDay(start+done);
+                    day.onLoad(onLoad);
+                    day.onError(onError);
+                }
             }else{
-                day = LoadDay(start+done);
-                day.onLoad(onLoad);
-                day.onError(onError);
+                onError(event);
             }
         }
 
