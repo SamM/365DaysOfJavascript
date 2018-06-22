@@ -8,7 +8,7 @@ if(typeof define != "function"){
 
 define(function(require){
 
-    var llac = require('../../common/llac');
+    var llac = require('js/llac');
     var LoadDays = function(start, end){
 
         var callbacks = {};
