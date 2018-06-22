@@ -84,6 +84,7 @@ define(function(require){
 
     loader.onDone(function(days){
         console.log(days.length + " days were loaded");
+        document.body.removeChild(loadingMsg);
     });
 
     return loader;
