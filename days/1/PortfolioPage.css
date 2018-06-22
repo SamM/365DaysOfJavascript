@@ -1,0 +1,37 @@
+body{
+    background-color: hsl(190, 35%, 90%);
+    display: grid;
+    grid-template-columns: 25px auto 25px;
+    grid-template-rows: 100px span 50px;
+    grid-template-areas: "left heading right"
+    "left center right"
+    "left footer right";
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.days{
+    grid-area: center;
+}
+
+h1{
+    grid-area: heading;
+    font-family: monospace;
+    line-height: 50px;
+}
+
+h2{
+    font-family: monospace;
+    line-height: 30px;
+    margin-top: 75px;
+    grid-area: heading;
+}
+h3{
+    font-size: 2em;
+    font-family: monospace;
+    line-height: 30px;
+}
+.day .date{
+    margin-top: -18px;
+    font-size: 0.85em;
+    font-weight: bold;
+}

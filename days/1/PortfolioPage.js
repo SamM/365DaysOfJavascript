@@ -12,7 +12,9 @@ define(function(require){
     var start_day = 0;
     var end_day = 365;
 
-    var loader = LoadDays(start_day, end_day);
+    var pageHeading = document.createElement('h1');
+    pageHeading.innerHTML = "365 Days Of Writing Code In Javascript";
+    document.body.appendChild(pageHeading);
 
     var loadingMsg = document.createElement('div');
     loadingMsg.className = "loading";
@@ -27,7 +29,7 @@ define(function(require){
     var daysHeading = document.createElement('h2');
     daysHeading.innerHTML = "0 Days Completed";
     
-    days.appendChild(daysHeading);
+    document.body.appendChild(daysHeading);
     document.body.appendChild(days);
 
     var loaded = 0;
@@ -42,7 +44,7 @@ define(function(require){
 
         var date = document.createElement('div');
         date.className = "date";
-        date.innerHTML = '<strong>Date:</strong> '+info.date;
+        date.innerHTML = info.date;
         day.appendChild(date);
 
         var scripts = document.createElement('div');
@@ -67,6 +69,8 @@ define(function(require){
 
         return day;
     }
+
+    var loader = LoadDays(start_day, end_day);
 
     loader.onLoad(function(index, info){
         console.log("Day "+index+": ");
