@@ -22,3 +22,7 @@ The `common` folder will be used to store common javascript files that are depen
 The `base_day` folder exists as a utility for when I start a new day. I can copy and paste the `base_day` folder into the `days` folder and rename to the day number and I will be setup ready to go.
 
 The `days` folder contains a folder for each day of the project I have completed. They will all contain an `INFO.js` that will be used when viewing the project with some web application that I will create for viewing the contents of the project.
+
+## View Index Page
+
+- [index.html](https://samm.github.io/365DaysOfJavascript/)
