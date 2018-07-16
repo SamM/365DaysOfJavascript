@@ -1,0 +1,15 @@
+{
+    "day": 3,
+    "date": "26 June - 16 July 2018",
+    "scripts" : {
+        "Rephrase" : {
+            "filename": "Rephrase.js"
+        },
+        "TriangleFractal": {
+           "filename" : "TriangleFractal.js"
+       },
+       "Generator": {
+           "filename": "Generator.js"
+       }
+    }
+}

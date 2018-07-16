@@ -1,0 +1,11 @@
+{
+    "day": 2,
+    "date": "23 June 2018",
+    "scripts" : {
+        "ColoredShape": {
+            "filename": "ColoredShape.js",
+            "examples": {},
+            "documentation": "ColoredShape/documentation.md"
+        }
+    }
+}
